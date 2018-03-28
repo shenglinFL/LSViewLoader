@@ -20,7 +20,17 @@ enum LSHUDMode {
 
 extension MBProgressHUD {
     
-    private static var animateImages:[UIImage] = []
+    public static var animateImages:[UIImage] = []
+    
+    public static var ls_textSize: CGFloat = 12
+    public static var ls_textColor: UIColor = .white
+    public static var ls_backgroundColor: UIColor = .black
+    public static var ls_contentMargin: CGFloat = 10
+    public static var ls_successColor: UIColor = .green
+    public static var ls_failureColor: UIColor = .red
+    public static var ls_successView: UIView?
+    public static var ls_failureView: UIView?
+    public static var ls_successD
     
     public static func xrj_showHUDActivity(superView: UIView) {
         
@@ -84,7 +94,7 @@ extension MBProgressHUD {
     }
     
     // MARK: - 纯文本
-    public static func ls_showText(superView: UIView, title: String? = nil, detail: String? = nil, superViewInteractionEnabled: Bool = true, graceTime: TimeInterval = 0) {
+    public static func ls_showText(superView: UIView, title: String?, detail: String? = nil, superViewInteractionEnabled: Bool = true, graceTime: TimeInterval = 0) {
         let hud = MBProgressHUD(view: superView)
         hud.removeFromSuperViewOnHide = true
         hud.mode = .text
@@ -92,8 +102,9 @@ extension MBProgressHUD {
         hud.detailsLabel.text = detail
         hud.isUserInteractionEnabled = !superViewInteractionEnabled
         hud.graceTime = graceTime
-        
-        hud.isSquare = true
+
+        hud.bezelView.backgroundColor = .black
+        hud.label.textColor = .white
         
         superView.addSubview(hud)
         hud.show(animated: true)

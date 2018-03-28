@@ -50,7 +50,8 @@ class DetailViewController: UIViewController {
 //
 //        }
 //        MBProgressHUD.ls_showHUD(superView: self.view)
-        MBProgressHUD.ls_showText(superView: self.view, title: "Title", detail: "Detail", superViewInteractionEnabled: true, graceTime: 1)
+//        MBProgressHUD.ls_showText(superView: self.view, title: "Title", detail: "Detail", superViewInteractionEnabled: true, graceTime: 1)
+        MBProgressHUD.ls_showText(superView: self.view, title: "请求成功，请稍后再试")
 
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
