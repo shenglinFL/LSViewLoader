@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
     s.name         = 'LSViewLoader'
-    s.version      = '0.0.1'
+    s.version      = '0.0.2'
     s.summary      = '加载视图'
     s.homepage     = 'https://github.com/shenglinFL/LSViewLoader'
     s.license      = 'MIT'
@@ -19,4 +19,5 @@ Pod::Spec.new do |s|
     s.source_files = 'LSViewLoader/LSViewLoader/LoadingView.swift'
     s.requires_arc = true
     s.dependency 'MBProgressHUD', '~> 1.1.0'
+
 end
