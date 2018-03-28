@@ -30,7 +30,7 @@ extension MBProgressHUD {
     public static var ls_failureColor: UIColor = .red
     public static var ls_successView: UIView?
     public static var ls_failureView: UIView?
-    public static var ls_successD
+//    public static var ls_successD
     
     public static func xrj_showHUDActivity(superView: UIView) {
         
